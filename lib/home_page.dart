@@ -1,5 +1,5 @@
 import 'dart:io';
-
+import 'package:camera_project/music_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
@@ -45,6 +45,27 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               SizedBox(height: 10),
+              Padding(
+                padding: EdgeInsets.only(top: 10.0, right: 35.0, left: 35.0,bottom: 5),
+                child: Container(
+                  width: double.infinity,
+                  height: 50,
+                  alignment: Alignment.center,
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    color: Color.fromRGBO(2, 141, 153, 1),
+                  ),
+                  child: MaterialButton(
+                    onPressed: () async {
+                     Navigator.push(context, MaterialPageRoute(builder: (context)=> MusicPlayer()));
+                    },
+                    child: Text(
+                      'SIGN UP',
+                      style: TextStyle(color: Colors.white, fontSize: 25),
+                    ),
+                  ),
+                ),
+              ),
               Padding(
                 padding:  EdgeInsets.only(left: 15,right: 15),
                 child: Container(
